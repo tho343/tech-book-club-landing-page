@@ -107,6 +107,7 @@ nav {
   display: block;
   margin: auto;
   width: 540px;
+  border-radius: 8px;
 }
 
 .banner,
@@ -117,9 +118,9 @@ section.socials {
   gap: 80px;
   max-width: 1400px;
 }
-.banner > .image-container {
-  width: 540px;
-  height: 606px;
+.image-container {
+  width: 100%;
+
   overflow: hidden;
   border-radius: 8px;
 }
@@ -154,21 +155,20 @@ section h2 {
   font-size: 40px;
   line-height: 65px;
 }
-section.features > img {
+.features > .image-container > img {
   content: url(./assets/images/image-read-together-desktop.webp);
   display: block;
   margin: auto;
-  width: 560px;
-  height: 520px;
+  width: 90%;
+
   border-radius: 8px;
 }
 
-section.socials > img {
+.socials > .image-container > img {
   content: url(./assets/images/image-not-average-desktop.webp);
   display: block;
   margin: auto;
-  width: 560px;
-  height: 520px;
+  width: 90%;
   border-radius: 8px;
 }
 .circled {
@@ -313,5 +313,44 @@ footer > h2 {
   }
   .quotes {
     text-align: start;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+  }
+  header,
+  section {
+    padding: 16px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  section h2,
+  footer > h2,
+  blockquote {
+    font-size: 30px;
+  }
+  body {
+    font-size: 20px;
+  }
+  .banner-image {
+    content: url(./assets/images/image-hero-mobile.webp);
+    width: 90%;
+  }
+  section.journey {
+    display: none;
+  }
+  .banner,
+  section.features,
+  section.socials {
+    padding-top: 16px;
+  }
+  .image-container {
+    height: auto;
+  }
+  .circled::after {
+    left: -80px;
+    position: absolute;
   }
 }
